@@ -1,4 +1,5 @@
 cabal-version: 2.2
+
 -- This file has been generated from package.yaml by hpack version 0.37.0.
 --
 -- see: https://github.com/sol/hpack
@@ -6,6 +7,7 @@ cabal-version: 2.2
 name:           duplicate-finder
 version:        1.0.0
 author:         Vladyslav Stashevskyi
+maintainer:     vladyslav.stashevskyi723@student.cuni.cz
 copyright:      2025 Vladyslav Stashevskyi
 license:        BSD-3-Clause
 license-file:   LICENSE
@@ -37,6 +39,7 @@ library
     , containers
     , directory
     , filepath
+    , vector
     , vty
   default-language: Haskell2010
 
@@ -52,6 +55,7 @@ executable duplicate-finder-exe
   build-depends:
       base >=4.7 && <5
     , duplicate-finder
+    , vector
   default-language: Haskell2010
 
 test-suite duplicate-finder-test
@@ -67,10 +71,5 @@ test-suite duplicate-finder-test
   build-depends:
       base >=4.7 && <5
     , brick
-    , bytestring
-    , containers
-    , directory
-    , duplicate-finder
-    , filepath
     , vty
   default-language: Haskell2010
