@@ -1,7 +1,7 @@
 module Main where
 
 import System.Environment (getArgs)
-import Scanner (findDuplicates)
+import Scanner (findDups)
 import UI (launchUI)
 
 main :: IO ()
@@ -10,7 +10,7 @@ main = do
     case args of
         [dir] -> do
             putStrLn "Scanning for duplicates"
-            groups <- findDuplicates dir
+            groups <- findDups dir
             if null groups
                 then putStrLn "No duplicates found"
                 else launchUI groups
