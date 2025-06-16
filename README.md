@@ -35,3 +35,12 @@ cabal run duplicate-finder-exe -- "<full directory path>"
 - `Space` - Mark/Unmark
 - `Enter` - Delete marked files
 - `q` - quit the application
+
+
+## Example behaviour
+- Test directory contains 2 identical text files and 2 copies of an image
+- Group 1 with 2 duplicates of a text file, `file1.txt` marked for deletion:
+![Screenshot](images/image1.jpg)
+
+- Group 2 with 2 duplicates of an image, `image2.txt` marked for deletion:
+![Screenshot](images/image2.jpg)
