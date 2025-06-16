@@ -35,7 +35,7 @@ listDir path = do
     case contents of
         Left _ -> return []
         -- recursively handle subdirectories
-        Right names -> fmap concat . mapM handlePath $ names
+        Right names -> concat <$> mapM handlePath names
     where
         -- either directory or a final filepath
         handlePath name = do
