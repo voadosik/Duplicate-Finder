@@ -1,7 +1,6 @@
 module Scanner (findDups) where
 
-import System.Directory
-    ( doesDirectoryExist, getFileSize, listDirectory )
+import System.Directory ( doesDirectoryExist, getFileSize, listDirectory )
 import System.FilePath ( (</>) )
 import qualified Data.Map.Strict as M
 import qualified Data.ByteString as BS
