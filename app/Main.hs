@@ -4,6 +4,8 @@ import System.Environment (getArgs)
 import Scanner (findDups)
 import UI (launchUI)
 
+
+-- Main entry point, expects directory path to scan as an argument
 main :: IO ()
 main = do
     args <- getArgs
