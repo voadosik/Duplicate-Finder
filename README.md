@@ -44,3 +44,6 @@ cabal run duplicate-finder-exe -- "<full directory path>"
 
 - Group 2 with 2 duplicates of an image, `image2.jpg` marked for deletion:
 ![Screenshot](images/image1.jpg)
+
+
+- After pressing `Enter` key, if no error occured `2 files deleted successfully` message is displayed 
