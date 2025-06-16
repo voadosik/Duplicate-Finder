@@ -25,7 +25,7 @@ cabal build
 
 3. Run the program:
 ```
-cabal run duplicate-finder-exe -- "<full directory path>"
+cabal run duplicate-finder-exe -- "<directory absolute path>"
 ```
 
 
