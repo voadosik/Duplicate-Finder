@@ -42,5 +42,5 @@ cabal run duplicate-finder-exe -- "<full directory path>"
 - Group 1 with 2 duplicates of a text file, `file1.txt` marked for deletion:
 ![Screenshot](images/image2.jpg)
 
-- Group 2 with 2 duplicates of an image, `image2.txt` marked for deletion:
+- Group 2 with 2 duplicates of an image, `image2.jpg` marked for deletion:
 ![Screenshot](images/image1.jpg)
