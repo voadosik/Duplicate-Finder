@@ -1,7 +1,8 @@
 ### Duplicate Finder
 
-TUI application written using Brick library for Haskell programming language.
-It searches for duplicates in a directory specified by user, user can review the groups of duplicates, mark the files for deletion and remove them.
+TUI application written using Brick library for Haskell.
+It searches for duplicates in a directory specified by user.
+User can review the groups of duplicates, mark the files for deletion and remove them.
 
 ## Features
 - Group navigation of duplicate files
