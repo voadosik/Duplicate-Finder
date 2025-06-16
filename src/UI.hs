@@ -70,7 +70,7 @@ app = App
         appChooseCursor = neverShowCursor
   }
 
--- Arrows handlers
+-- UI handlers
 
 -- Move selection up
 handleEvent :: BrickEvent Name e -> EventM Name St ()
