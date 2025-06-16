@@ -55,7 +55,7 @@ drawUI st =
 
 -- Draws a single file in the file list
 drawFileItem :: Set FilePath -> Bool -> FilePath -> Widget Name
-drawFileItem isSelected path =
+drawFileItem markedSet isSelected path =
   let marker = if isSelected then "→ " else "  " 
       star = if Set.member path markedSet then "* " else "  "
   in str $ marker ++ star ++ path
