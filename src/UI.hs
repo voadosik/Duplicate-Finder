@@ -47,16 +47,18 @@ drawUI st =
           Just msg -> withAttr (attrName "message") (str msg) <+> str " "
           Nothing -> str " ",
           borderWithLabel (str "Duplicate Files (Space = Mark, Enter = Delete Marked, q = Quit)") $
-          -- render the scrollable file list, true parameter allows item highlighting
-          renderList drawFileItem True (stFileList st), str " ", 
+          -- render the scrollable file list, true parameter allows item highlighting, star if marked
+          renderList (drawFileItem (stMarkedForDeletion st)) True (stFileList st), 
           str "Controls: ↑/↓ = Navigate files, ←/→ = Change between groups, Space = Mark/Unmark, Enter = Delete marked files, q = Quit"
     ]
   ]
 
 -- Draws a single file in the file list
-drawFileItem :: Bool -> FilePath -> Widget Name
+drawFileItem :: Set FilePath -> Bool -> FilePath -> Widget Name
 drawFileItem isSelected path =
-  let marker = if isSelected then "→ " else "  " in str $ marker ++ path
+  let marker = if isSelected then "→ " else "  " 
+      star = if Set.member path markedSet then "* " else "  "
+  in str $ marker ++ star ++ path
 
 -- Brick application definition(assignment of methods to internal definitions of Brick library)
 app :: App St e Name
